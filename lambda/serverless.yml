@@ -1,0 +1,21 @@
+service: lambda-logs
+
+plugins:
+    - serverless-offline
+
+frameworkVersion: "3"
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+    region: us-east-2
+    timeout: 60
+functions:
+    update_configuration:
+        handler: update_configuration.handler
+        # role: ${env:LAMBDA_ROLE}
+        events:
+            - http:
+                  path: update
+                  method: post
+

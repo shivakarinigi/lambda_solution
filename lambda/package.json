@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.577.0",
+    "@aws-sdk/client-lambda": "^3.577.0",
+    "serverless-offline": "^13.6.0"
+  }
+}
