@@ -18,4 +18,11 @@ functions:
             - http:
                   path: update
                   method: post
-
+        
+    lambda_insights:
+        handler: lambda_insights.handler
+        # role: ${env:LAMBDA_ROLE}
+        events:
+            - http:
+                  path: insights
+                  method: post
